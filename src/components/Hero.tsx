@@ -101,13 +101,15 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.1, duration: 0.5, type: "spring", bounce: 0.5 }}
           >
-            <Button
+            <a href="https://colab.research.google.com/drive/1RBkNW5SsR2IIr2XQ2eF-SsE4sUma0jgo">
+              <Button
               size="lg"
               className="neon-glow text-lg px-8 py-6 rounded-xl font-semibold bg-primary hover:bg-primary/90 group"
             >
               Explore the Project
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
+            </a>
           </motion.div>
         </div>
       </div>
