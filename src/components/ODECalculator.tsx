@@ -9,7 +9,6 @@ import { Label } from "./ui/label";
 import { solveODE } from "../ode-linear/ODESolver";
 import { ODEInput, ODESolution } from "../ode-linear/types";
 import ODESteps from "../ode-linear/ODESteps";
-import ODEGraph from "../ode-linear/ODEGraph";
 import { toast } from "sonner";
 
 const ODECalculator = () => {
@@ -17,8 +16,8 @@ const ODECalculator = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const [input, setInput] = useState<ODEInput>({
-    P: "2*x",
-    Q: "x^2",
+    P: "1",
+    Q: "exp(x)",
     x0: undefined,
     y0: undefined,
   });
@@ -182,7 +181,6 @@ const ODECalculator = () => {
               <ODESteps input={input} solution={solution} />
             </div>
 
-            <ODEGraph solution={solution} />
           </motion.div>
         )}
       </div>

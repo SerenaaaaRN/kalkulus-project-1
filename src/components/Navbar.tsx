@@ -15,11 +15,11 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "#hero" },
     { name: "Team", href: "#team" },
-    { name: "Why React", href: "#why" },
+    { name: "Why Python", href: "#why" },
     { name: "Libraries", href: "#libraries" },
     { name: "Material", href: "#material" },
-    { name: "Architecture", href: "#architecture" },
-    
+    { name: "ODE Solver", href: "#calculator" },
+    { name: "Goodbye", href: "#outro" },
   ];
 
   return (

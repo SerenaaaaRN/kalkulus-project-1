@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold text-gradient mb-4">∫ Kalkulus Solver</h3>
             <p className="text-foreground/70 text-sm leading-relaxed">
-              Python-based differential equation solver dengan visualisasi interaktif.
+              React-based differential equation solver dengan visualisasi interaktif.
               Project Kalkulus 2025 by kel 1.
             </p>
           </div>
@@ -17,13 +17,21 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "Why Python", "Libraries", "Material", "Demo", "Architecture", "Team"].map((link) => (
-                <li key={link}>
+              {[
+                { name: "Home", id: "hero" },
+                { name: "Team", id: "team" },
+                { name: "Why React", id: "why" },
+                { name: "Libraries", id: "libraries" },
+                { name: "Material", id: "material" },
+                { name: "ODE Solver", id: "calculator" },
+                { name: "Goodbye", id: "outro" }
+              ].map((link) => (
+                <li key={link.name}>
                   <a
-                    href={`#${link.toLowerCase().replace(" ", "")}`}
+                    href={`#${link.id}`}
                     className="text-foreground/70 hover:text-primary text-sm transition-colors duration-200"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 </li>
               ))}
@@ -63,7 +71,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border/50 text-center">
           <p className="text-foreground/60 text-sm flex items-center justify-center gap-2">
-            Made with Python, NumPy, SymPy, Matplotlib & Tkinter
+            Made with React, Nerdamer, KaTeX & Plotly.js
           </p>
           <p className="text-foreground/50 text-xs mt-2">
             © 2025 Kalkulus Solver. Presentation Project.
