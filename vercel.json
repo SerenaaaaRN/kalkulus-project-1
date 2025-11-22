@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "/backend_api/main.py"
+      "destination": "/backend/main.py"
     }
   ]
 }
