@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { BookOpen } from "lucide-react";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath} from "react-katex";
 
 
 const Material = () => {
@@ -51,7 +51,7 @@ const Material = () => {
 
           <div className="bg-muted/30 rounded-2xl p-8 mb-6">
             <h4 className="text-xl font-semibold mb-4 text-accent">Bentuk Umum:</h4>
-            <div className="text-center py-8 overflow-x-auto">
+            <div className="text-center overflow-x-auto">
               <div className="text-2xl md:text-3xl font-mono text-foreground">
                 <BlockMath math="\frac{dy}{dx} + P(x)y = Q(x)" />
               </div>
@@ -60,7 +60,7 @@ const Material = () => {
 
           <div className="bg-muted/30 rounded-2xl p-8 mb-6">
             <h4 className="text-xl font-semibold mb-4 text-accent">Maka Solusi Umumnya:</h4>
-            <div className="text-center py-8 overflow-x-auto">
+            <div className="text-center overflow-x-auto">
               <div className="text-2xl md:text-2xl font-mono text-foreground">
                 <BlockMath math={`y = e^{-\\int f(x)\\,dx} \\left( \\int e^{\\int f(x)\\,dx} \\, g(x) \\, dx \\right) + C e^{-\\int f(x)\\,dx}`}/>
               </div>

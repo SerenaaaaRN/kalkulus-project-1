@@ -38,7 +38,7 @@ const Outro = () => {
             className="mb-8"
           >
             <h2 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-gradient">Terima Kasih!</span>
+              <span className="text-gradient">Goodbyeeee...</span>
             </h2>
             <div className="flex justify-center gap-3 mb-8">
               <motion.div
@@ -69,18 +69,11 @@ const Outro = () => {
               </div>
             </div>
 
-            <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed mb-6">
-              Demikian presentasi kami tentang{" "}
+            <p className="text-xl md:text-2l text-foreground/90 leading-relaxed mb-6">
+              Kami harap project ini memberikan pemahaman lebih baik dalam menyelesaikan {" "}
               <span className="text-gradient font-bold">
-                Persamaan Diferensial Linear Orde 1
+                Persamaan Diferensial
               </span>{" "}
-              menggunakan teknologi web modern dengan React dan library matematika JavaScript.
-            </p>
-
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-              Kami berharap proyek ini dapat memberikan pemahaman yang lebih baik tentang
-              penyelesaian persamaan diferensial dan bagaimana teknologi dapat membantu
-              dalam pembelajaran matematika.
             </p>
 
             <div className="inline-block px-6 py-3 rounded-xl bg-muted/50 border-2 border-primary/30">
