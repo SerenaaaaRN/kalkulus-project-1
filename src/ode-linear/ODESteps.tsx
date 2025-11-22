@@ -1,55 +1,13 @@
 import { motion } from "framer-motion";
 import { BlockMath } from "react-katex";
-import { ODESolution, ODEInput } from "./types";
 import { CheckCircle2 } from "lucide-react";
+import { ODEStep } from "@/services/odeApi"; // Import tipe data dari API service
 
 interface ODEStepsProps {
-  input: ODEInput;
-  solution: ODESolution;
+  steps: ODEStep[]; // Sekarang hanya menerima array steps
 }
 
-const ODESteps = ({ input, solution }: ODEStepsProps) => {
-  const steps = [
-    {
-      title: "Langkah 1: Bentuk Umum ODE",
-      description: "Persamaan diferensial linear orde 1",
-      latex: `\\frac{dy}{dx} + (${input.P})y = ${input.Q}`,
-    },
-    {
-      title: "Langkah 2: Faktor Integrasi",
-      description: "Hitung faktor integrasi μ(x) = e^(∫P(x)dx)",
-      latex: `\\mu(x) = e^{\\int (${input.P}) \\, dx} = ${solution.muLatex}`,
-    },
-    {
-      title: "Langkah 3: Kalikan ODE dengan μ(x)",
-      description: "Kalikan seluruh persamaan dengan faktor integrasi",
-      latex: `${solution.muLatex} \\frac{dy}{dx} + ${solution.muLatex} (${input.P}) y = ${solution.muQLatex}`,
-    },
-    {
-      title: "Langkah 4: Identifikasi Turunan Lengkap",
-      description: "Sisi kiri adalah turunan dari μ(x)y",
-      latex: `\\frac{d}{dx}[${solution.muLatex} \\cdot y] = ${solution.muQLatex}`,
-    },
-    {
-      title: "Langkah 5: Integrasikan Kedua Sisi",
-      description: "Integrasikan untuk mendapatkan μ(x)y",
-      latex: `${solution.muLatex} \\cdot y = \\int ${solution.muQLatex} \\, dx = ${solution.integralMuQLatex} + C`,
-    },
-    {
-      title: "Langkah 6: Solusi Akhir",
-      description: "Bagi dengan μ(x) untuk mendapatkan y(x)",
-      latex: `y(x) = ${solution.generalSolutionLatex}`,
-    },
-  ];
-
-  if (solution.particularSolutionLatex) {
-    steps.push({
-      title: "Langkah 7: Solusi Khusus",
-      description: `Dengan kondisi awal y(${input.x0}) = ${input.y0}, didapat C = ${solution.C?.toFixed(4)}`,
-      latex: `y(x) = ${solution.particularSolutionLatex}`,
-    });
-  }
-
+const ODESteps = ({ steps }: ODEStepsProps) => {
   return (
     <div className="space-y-6">
       {steps.map((step, index) => (
