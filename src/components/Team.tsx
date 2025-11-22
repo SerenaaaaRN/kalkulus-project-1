@@ -76,11 +76,11 @@ const Team = () => {
                   <img
                     src={member.photo}
                     alt={member.name}
-                    className="w-24 h-24 rounded-2xl object-cover shadow-lg"
+                    className="w-36 h-36 rounded-2xl object-cover shadow-lg"
                   />
                 ) : (
                 <div
-                  className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${member.color} flex items-center justify-center text-3xl font-bold text-white`}>
+                  className={`w-36 h-36 rounded-2xl bg-gradient-to-br ${member.color} flex items-center justify-center text-3xl font-bold text-white`}>
                     {member.initials}
                 </div>
                 )}

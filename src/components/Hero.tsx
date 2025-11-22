@@ -69,7 +69,7 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="floating"
           >
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
               <span className="text-gradient">Kelompok Kalkulus 1</span>
             </h1>
           </motion.div>
@@ -90,10 +90,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="text-lg md:text-xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-l text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             Aplikasi berbasis Python untuk menyelesaikan persamaan diferensial linear ordo 1
-            dengan visualisasi interaktif menggunakan library python s SymPy, Matplotlib, dan Tkinter.
+            dengan visualisasi interaktif menggunakan library dari Python seperti, SymPy, Matplotlib, dan Tkinter.
           </motion.p>
 
           <motion.div
