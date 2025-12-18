@@ -1,42 +1,104 @@
-**Use your preferred IDE**
+# 🧮 Kalkulus Solver: 1st Order Linear ODEs
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-Follow these steps:
+Website interaktif untuk menyelesaikan **Persamaan Diferensial Linear Orde 1** dengan visualisasi grafik dan langkah-langkah penyelesaian (step-by-step solution).
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Project ini disusun untuk memenuhi tugas besar mata kuliah **Kalkulus 1** di **Universitas Sriwijaya**.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🔗 **Live Demo:** https://kalkulusproject.vercel.app/
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 👥 Anggota Kelompok
+
+Project ini dikembangkan oleh tim mahasiswa Informatika (Angkatan 2024):
+
+| Nama | Peran |
+| :--- | :--- |
+| **Aditiah Okta Romadhon** | Pemateri & Research |
+| **Dhea Aurellia** | Pemateri & Research |
+| **Duhairillah** | Developer (Fullstack) & Moderator |
+| **Shafin Maulana** | Pemateri & Research |
+
+---
+
+## 📖 Tentang Project
+
+Aplikasi ini dirancang untuk menyelesaikan masalah matematika khusus bentuk:
+$$\frac{dy}{dx} + P(x)y = Q(x)$$
+
+Dengan menggunakan pendekatan **Faktor Integrasi**, aplikasi ini tidak hanya memberikan jawaban akhir, tetapi juga:
+1.  **Langkah Penyelesaian:** Menjabarkan proses integral dan substitusi secara detail.
+2.  **Solusi Umum & Khusus:** Menghitung konstanta $C$ berdasarkan nilai awal $(x_0, y_0)$.
+3.  **Visualisasi:** Menampilkan grafik kurva solusi menggunakan library plotting modern.
+4.  **Tabel Nilai:** Generate titik-titik koordinat $(x, y)$ untuk analisis lebih lanjut.
+
+## 🛠️ Teknologi yang Digunakan
+
+Kami menggabungkan kekuatan **Python** untuk komputasi simbolik matematika dan **React** untuk antarmuka yang responsif.
+
+### **Frontend (User Interface)**
+* ⚛️ **React + Vite** - Framework utama.
+* 🎨 **Tailwind CSS + Shadcn UI** - Styling dan komponen antarmuka modern.
+* ✨ **Framer Motion** - Animasi transisi yang halus.
+* 📈 **Plotly.js / Recharts** - Visualisasi grafik matematika.
+* 📝 **KaTeX** - Rendering notasi matematika (LaTeX).
+
+### **Backend & Computation**
+* 🐍 **Python** - Bahasa pemrograman utama untuk logika.
+* 🧮 **SymPy** - Library Python untuk matematika simbolik (Symbolic Mathematics).
+* 🔢 **NumPy** - Komputasi numerik.
+* ⚡ **FastAPI** - Menghubungkan logika Python dengan Frontend React.
+
+## 🚀 Cara Menjalankan Project (Localhost)
+
+Ikuti langkah berikut untuk menjalankan aplikasi di komputer kamu:
+
+### 1. Clone Repository
+```
+git clone https://github.com/SerenaaaaRN/kalkulus-project-1.git
+```
+### 2. Setup Frontend
+Install library JavaScript yang dibutuhkan:
+```
+npm install
+# atau
+yarn install
 ```
 
-**Edit a file directly in GitHub**
+### 3. Setup Python Backend
+Pastikan kamu sudah menginstall Python. Disarankan menggunakan Virtual Environment (venv).
+```
+# Install dependencies Python
+pip install -r requirements.txt
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 4. Jalankan Backend (Terminal 1)
+Masuk ke folder api dan jalankan server Python.
+```
+cd api
+py index.py
+```
+Biarkan terminal ini tetap terbuka/berjalan.
 
-**Use GitHub Codespaces**
+### 5. Jalankan Frontend (Terminal 2)
+Buka terminal baru di folder utama project, lalu jalankan Vite.
+```
+npm run dev
+```
+Buka browser dan akses alamat yang muncul (biasanya http://localhost:5173).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**📂 Struktur Project**
+```
+kalkulus-project-1/
+├── api/                # Logic Backend (Python/FastAPI)
+│   └── index.py        # Entry point API
+├── python/             # Modul Matematika (SymPy Solver)
+│   ├── main.py
+│   └── solver.py       # Algoritma penyelesaian ODE
+├── src/                # Source Code Frontend (React)
+│   ├── components/     # UI Components (Hero, Calculator, Team)
+│   ├── ode-linear/     # Komponen khusus Solver & Grafik
+│   └── assets/         # Gambar & Aset statis
+├── requirements.txt    # Daftar library Python
+└── package.json        # Daftar library JavaScript
+```
