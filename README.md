@@ -10,7 +10,7 @@ Project ini disusun untuk memenuhi tugas besar mata kuliah **Kalkulus 1** di **U
 
 ## 👥 Anggota Kelompok
 
-Project ini dikembangkan oleh tim mahasiswa Informatika (Angkatan 2024):
+Project ini dikembangkan oleh mahasiswa Teknik Informatika (Angkatan 2025):
 
 | Nama | Peran |
 | :--- | :--- |
